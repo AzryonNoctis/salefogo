@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block title %}Painel DEV{% endblock %}
+{% block content %}
+<div class="dev-wrap">
+  <section class="card glass-fire dev-main-card">
+    <div class="dev-header">
+      <div>
+        <h1 class="dev-page-title">PAINEL DEV</h1>
+        <div class="status {{ 'status-open' if quiz_open else 'status-closed' }}">
+          {{ 'Quiz aberto' if quiz_open else 'Quiz fechado' }}
+        </div>
+        <div class="round-code">Rodada atual: <code>{{ current_round_id }}</code></div>
+      </div>
+      <a href="/dev/logout" class="btn btn-secondary inline-btn">Sair</a>
+    </div>
+
+    <div class="glass-panel-soft">
+      <h2>Fases ativas da rodada</h2>
+      <div class="phase-checks">
+        <label class="phase-pill"><input type="checkbox" name="phase" value="phase1" {% if 'phase1' in active_phases %}checked{% endif %}> Fase 1</label>
+        <label class="phase-pill"><input type="checkbox" name="phase" value="phase2" {% if 'phase2' in active_phases %}checked{% endif %}> Fase 2</label>
+        <label class="phase-pill"><input type="checkbox" name="phase" value="phase3" {% if 'phase3' in active_phases %}checked{% endif %}> Fase 3</label>
+      </div>
+      <button class="btn btn-dev" onclick="savePhases()">Salvar fases</button>
+    </div>
+
+    <div class="glass-panel-soft">
+      <h2>Tempo da rodada</h2>
+      <p class="dev-help">Escolha em minutos. Ex.: 2 min = 120 segundos.</p>
+      <div class="time-config-row">
+        <input id="timeMinutes" type="number" min="1" max="180" value="{{ time_minutes }}" class="time-input" />
+        <button class="btn btn-dev" onclick="saveTime()">Salvar tempo</button>
+      </div>
+      <div class="meta-note">Tempo atual: <strong>{{ time_minutes }} min</strong></div>
+    </div>
+
+    <div class="glass-panel-soft">
+      <h2>Controle da rodada</h2>
+      <div class="dev-actions">
+        <button class="btn btn-success" onclick="actionDev('open')">Iniciar quiz</button>
+        <button class="btn btn-danger" onclick="actionDev('close')">Fechar quiz</button>
+        <button class="btn btn-secondary" onclick="actionDev('clear')">Limpar rodada</button>
+      </div>
+      <div id="devMsg" class="message-box"></div>
+    </div>
+  </section>
+
+  <section class="card glass-fire dev-table-card">
+    <h2>Participantes</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Participante</th>
+            <th>Status</th>
+            <th>Fase</th>
+            <th>✅</th>
+            <th>❌</th>
+            <th>⏳</th>
+            <th>⏱️ Tempo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in results %}
+          <tr>
+            <td>{{ row['participant_name'] }}</td>
+            <td>{{ row['status'] }}</td>
+            <td>{{ row['phase_reached'] }}</td>
+            <td>{{ row['score'] }}</td>
+            <td>{{ row['wrong_count'] }}</td>
+            <td>{{ row['unanswered_count'] }}</td>
+            <td>{{ row['elapsed_seconds'] }}s</td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="7">Nenhum participante ainda.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  async function actionDev(action) {
+    const response = await fetch('/dev/action', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ action })
+    });
+    const data = await response.json();
+    const msg = document.getElementById('devMsg');
+    msg.textContent = data.message || '';
+    msg.className = 'message-box ' + (response.ok ? 'success' : 'error');
+    if (response.ok) {
+      setTimeout(() => window.location.reload(), 500);
+    }
+  }
+
+  async function savePhases() {
+    const phases = Array.from(document.querySelectorAll('input[name="phase"]:checked')).map(el => el.value);
+    const response = await fetch('/dev/action', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ action: 'set_phases', phases })
+    });
+    const data = await response.json();
+    const msg = document.getElementById('devMsg');
+    msg.textContent = data.message || '';
+    msg.className = 'message-box ' + (response.ok ? 'success' : 'error');
+  }
+
+  async function saveTime() {
+    const minutes = Number(document.getElementById('timeMinutes').value);
+    const response = await fetch('/dev/action', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ action: 'set_time_minutes', minutes })
+    });
+    const data = await response.json();
+    const msg = document.getElementById('devMsg');
+    msg.textContent = data.message || '';
+    msg.className = 'message-box ' + (response.ok ? 'success' : 'error');
+    if (response.ok) {
+      setTimeout(() => window.location.reload(), 500);
+    }
+  }
+</script>
+{% endblock %}

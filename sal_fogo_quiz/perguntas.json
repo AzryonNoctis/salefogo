@@ -1,0 +1,851 @@
+{
+  "phase1": [
+    {
+      "question": "Qual região a capital Brasília está situada?",
+      "options": [
+        "Centro-Oeste",
+        "Sudeste",
+        "Nordeste",
+        "Sul"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Jamaica fica situada especificamente em qual continente?",
+      "options": [
+        "América Central",
+        "África",
+        "América do Sul",
+        "América do Norte"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quem pintou A Noite Estrelada?",
+      "options": [
+        "Van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Michelangelo"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o sétimo planeta do sistema solar?",
+      "options": [
+        "Urano",
+        "Saturno",
+        "Netuno",
+        "Júpiter"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Em quais países ficam a Torre Eiffel e a Torre de Pisa, respectivamente?",
+      "options": [
+        "França e Itália",
+        "Itália e França",
+        "França e Alemanha",
+        "Alemanha e Itália"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o idioma mais usado no mundo por falantes nativos?",
+      "options": [
+        "Mandarim",
+        "Inglês",
+        "Hindi",
+        "Espanhol"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quanto é 9 x 8?",
+      "options": [
+        "72",
+        "63",
+        "81",
+        "74"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual animal é conhecido como Navio do Deserto?",
+      "options": [
+        "Camelo",
+        "Elefante africano",
+        "Addax",
+        "Oryx"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quem descobriu o Brasil?",
+      "options": [
+        "Pedro Álvares Cabral",
+        "Cristóvão Colombo",
+        "Frederico Bandeira",
+        "Pedro Bonafaccio"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o maior oceano do mundo?",
+      "options": [
+        "Pacífico",
+        "Atlântico",
+        "Índico",
+        "Antártico"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é a cor resultante da mistura de vermelho + branco?",
+      "options": [
+        "Rosa",
+        "Laranja",
+        "Verde",
+        "Vermelho claro"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quantos dias tem um ano bissexto?",
+      "options": [
+        "366",
+        "365",
+        "364",
+        "367"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o símbolo químico do ferro?",
+      "options": [
+        "Fe",
+        "Au",
+        "Fr",
+        "Ir"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quem foi o primeiro homem a pisar na Lua?",
+      "options": [
+        "Neil Armstrong",
+        "Nel Armstrong",
+        "Buzz Aldrin",
+        "Michael Collins"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o país do futebol?",
+      "options": [
+        "Brasil",
+        "Inglaterra",
+        "Alemanha",
+        "Itália"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o menor país do mundo?",
+      "options": [
+        "Vaticano",
+        "Mônaco",
+        "Nauru",
+        "Tuvalu"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o menor mamífero do mundo no critério tamanho?",
+      "options": [
+        "Morcego-nariz-de-porco de Kitti",
+        "Musaranho-pigmeu",
+        "Jerboa-pigmeu",
+        "Camundongo-pigmeu africano"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Quem escreveu “Dom Casmurro”?",
+      "options": [
+        "Machado de Assis",
+        "José de Alencar",
+        "Clarice Lispector",
+        "Guimarães Rosa"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual gás possui a maior quantidade na atmosfera terrestre?",
+      "options": [
+        "Nitrogênio",
+        "Oxigênio",
+        "Argônio",
+        "Metano"
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Qual é o maior mamífero da Terra?",
+      "options": [
+        "Baleia-azul",
+        "Elefante africano",
+        "Baleia-cachalote",
+        "Girafa"
+      ],
+      "correct_index": 0
+    }
+  ],
+  "phase2": {
+    "Futebol": [
+      {
+        "question": "Qual o maior artilheiro da Copa do Mundo?",
+        "options": [
+          "Miroslav Klose",
+          "Ronaldo Nazário",
+          "Just Fontaine",
+          "Pelé"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem ganhou a Copa do Mundo de 1990?",
+        "options": [
+          "Alemanha",
+          "Itália",
+          "Brasil",
+          "Argentina"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual seleção ficou conhecida na Copa do Mundo de 1974 como “Laranja Mecânica”?",
+        "options": [
+          "Holanda",
+          "Brasil",
+          "Jamaica",
+          "Espanha"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual país sediou a Copa do Mundo de 1958?",
+        "options": [
+          "Suécia",
+          "Brasil",
+          "Chile",
+          "México"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual clube venceu a edição 2019/2020 da Champions League?",
+        "options": [
+          "Bayern de Munique",
+          "Chelsea",
+          "Liverpool",
+          "PSG"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual jogador tem o recorde de mais gols em uma única edição da Champions League, com 17?",
+        "options": [
+          "Cristiano Ronaldo",
+          "Lionel Messi",
+          "Karim Benzema",
+          "Robert Lewandowski"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual clube brasileiro tem mais títulos de Libertadores?",
+        "options": [
+          "Flamengo",
+          "Corinthians",
+          "Palmeiras",
+          "Santos"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual clube tem mais títulos da Libertadores?",
+        "options": [
+          "Independiente",
+          "Boca Juniors",
+          "River Plate",
+          "Peñarol"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual seleção venceu a Eurocopa de 2004?",
+        "options": [
+          "Grécia",
+          "Itália",
+          "Dinamarca",
+          "Alemanha"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem é o maior artilheiro da história do Campeonato Brasileiro com 190 gols?",
+        "options": [
+          "Roberto Dinamite",
+          "Zico",
+          "Romário",
+          "Edmundo"
+        ],
+        "correct_index": 0
+      }
+    ],
+    "História": [
+      {
+        "question": "Quem foi o primeiro presidente do Brasil?",
+        "options": [
+          "Deodoro da Fonseca",
+          "Floriano Peixoto",
+          "Dom Pedro I",
+          "Getúlio Vargas"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Em que ano a América foi descoberta por Cristóvão Colombo?",
+        "options": [
+          "1492",
+          "1500",
+          "1494",
+          "1498"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual tratado encerrou oficialmente a Primeira Guerra Mundial?",
+        "options": [
+          "Tratado de Versalhes",
+          "Tratado de Tordesilhas",
+          "Tratado de Paris",
+          "Tratado INF"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem foi o líder da União Soviética durante a maior parte da Segunda Guerra Mundial?",
+        "options": [
+          "Joseph Stalin",
+          "Vladimir Lenin",
+          "Trótski",
+          "Vladimir Putin"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Em que ano ocorreu a independência do Brasil?",
+        "options": [
+          "1822",
+          "1512",
+          "1889",
+          "1821"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem foi o principal propagandista e mártir da Inconfidência Mineira?",
+        "options": [
+          "Tiradentes",
+          "Pelourinho",
+          "Antônio Conselheiro",
+          "Bento Gonçalves"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual civilização antiga construiu Machu Picchu?",
+        "options": [
+          "Império Inca",
+          "Império Maia",
+          "Império Asteca",
+          "Império Eldorado"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem foi o presidente dos EUA durante a Guerra Civil Americana?",
+        "options": [
+          "Abraham Lincoln",
+          "Roosevelt",
+          "George Washington",
+          "John Kennedy"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Durante o Ciclo da Borracha no Brasil, qual cidade se destacou pelo luxo e modernização?",
+        "options": [
+          "Manaus",
+          "São Paulo",
+          "Salvador",
+          "Belém"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual imperador romano é associado ao Grande Incêndio de Roma em 64 d.C.?",
+        "options": [
+          "Nero",
+          "Tibério",
+          "Vespasiano",
+          "Calígula"
+        ],
+        "correct_index": 0
+      }
+    ],
+    "Geografia": [
+      {
+        "question": "Qual é o maior país do mundo?",
+        "options": [
+          "Rússia",
+          "Brasil",
+          "China",
+          "Estados Unidos"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o rio mais volumoso do mundo?",
+        "options": [
+          "Amazonas",
+          "Nilo",
+          "Yangtzé",
+          "Mississipi"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é a capital da Turquia?",
+        "options": [
+          "Ancara",
+          "Istambul",
+          "Galatasaray",
+          "Antália"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual país africano fica próximo à Espanha, separado pelo Estreito de Gibraltar?",
+        "options": [
+          "Marrocos",
+          "Argélia",
+          "Tunísia",
+          "Líbia"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual linha imaginária divide a Terra em hemisfério ocidental e oriental?",
+        "options": [
+          "Meridiano de Greenwich",
+          "Linha do Equador",
+          "Trópico de Câncer",
+          "Trópico de Capricórnio"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o ponto mais alto do mundo acima do nível do mar?",
+        "options": [
+          "Monte Everest",
+          "Monte Carlo",
+          "Himalaia",
+          "Cordilheira dos Andes"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o ponto mais alto do Brasil acima do nível do mar?",
+        "options": [
+          "Pico da Neblina",
+          "Monte Roraima",
+          "Pico 31 de Março",
+          "Pico da Bandeira"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual deserto é considerado o mais seco do mundo?",
+        "options": [
+          "Deserto do Atacama",
+          "Deserto do Saara",
+          "Deserto de Taklamakan",
+          "Deserto da Arábia"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o estreito que separa a Ásia da América?",
+        "options": [
+          "Estreito de Bering",
+          "Estreito de Gibraltar",
+          "Estreito de Malaca",
+          "Estreito de Magalhães"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quais são as cores da bandeira da Jamaica?",
+        "options": [
+          "Verde, amarelo e preto",
+          "Verde, amarelo, preto e vermelho",
+          "Verde, laranja e preto",
+          "Verde, amarelo e vermelho"
+        ],
+        "correct_index": 0
+      }
+    ],
+    "Ciências": [
+      {
+        "question": "Qual órgão bombeia sangue?",
+        "options": [
+          "Coração",
+          "Pulmão",
+          "Ânus",
+          "Artéria"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual planeta é o 2° mais próximo do Sol?",
+        "options": [
+          "Vênus",
+          "Mercúrio",
+          "Marte",
+          "Urano"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o símbolo químico do mercúrio?",
+        "options": [
+          "Hg",
+          "Cu",
+          "Me",
+          "Mc"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quantos ossos tem o corpo humano adulto?",
+        "options": [
+          "206",
+          "207",
+          "208",
+          "204"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem criou a teoria da evolução?",
+        "options": [
+          "Charles Darwin",
+          "Isaac Newton",
+          "Albert Einstein",
+          "Gregor Mendel"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem estabeleceu as leis da hereditariedade?",
+        "options": [
+          "Gregor Mendel",
+          "Charles Darwin",
+          "Johannes Kepler",
+          "Arquimedes"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quem formulou a lei da gravitação universal?",
+        "options": [
+          "Isaac Newton",
+          "Thomas Edison",
+          "Charles Darwin",
+          "Albert Einstein"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "O que não existe na célula animal?",
+        "options": [
+          "Cloroplasto",
+          "Membrana plasmática",
+          "Complexo de Golgi",
+          "Citoplasma"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual é o menor osso do corpo humano?",
+        "options": [
+          "Estribo",
+          "Bigorna",
+          "Martelo",
+          "Pisiforme"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Quantos ossos possui um tubarão adulto?",
+        "options": [
+          "Nenhum",
+          "Dois",
+          "Um",
+          "Quatro"
+        ],
+        "correct_index": 0
+      }
+    ],
+    "Cultura Pop": [
+      {
+        "question": "Qual ator nunca foi preso?",
+        "options": [
+          "Tom Hanks",
+          "Robert Downey Jr.",
+          "Mel Gibson",
+          "Keanu Reeves"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "No universo Marvel, qual é o nome real do Pantera Negra?",
+        "options": [
+          "T'Challa",
+          "M'Baku",
+          "N'Jadaka",
+          "T'Chalah"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual foi o primeiro longa de animação lançado pela Disney?",
+        "options": [
+          "Branca de Neve e os Sete Anões",
+          "Pinóquio",
+          "Mickey Mouse",
+          "Dumbo"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual filme detém a maior bilheteria da história do cinema sem ajuste de inflação?",
+        "options": [
+          "Avatar",
+          "Vingadores: Ultimato",
+          "Titanic",
+          "Star Wars: O Despertar da Força"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual ator interpretou o Coringa em Batman: O Cavaleiro das Trevas e venceu um Oscar póstumo?",
+        "options": [
+          "Heath Ledger",
+          "Joaquin Phoenix",
+          "Jack Nicholson",
+          "Jared Leto"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Em O Senhor dos Anéis, quem destrói o anel na Montanha da Perdição?",
+        "options": [
+          "Gollum",
+          "Sam",
+          "Frodo",
+          "Bilbo"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Na série Round 6, qual forma representa os trabalhadores de nível mais baixo?",
+        "options": [
+          "Círculo",
+          "Triângulo",
+          "Quadrado",
+          "Estrela"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual banda de rock britânica lançou The Dark Side of the Moon?",
+        "options": [
+          "Pink Floyd",
+          "Led Zeppelin",
+          "Queen",
+          "The Rolling Stones"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual filme ganhou o primeiro Oscar de Melhor Animação, em 2002?",
+        "options": [
+          "Shrek",
+          "Toy Story",
+          "Monstros S.A.",
+          "A Viagem de Chihiro"
+        ],
+        "correct_index": 0
+      },
+      {
+        "question": "Qual cineasta dirigiu Pulp Fiction, Kill Bill e Bastardos Inglórios?",
+        "options": [
+          "Quentin Tarantino",
+          "Steven Spielberg",
+          "Christopher Nolan",
+          "Martin Scorsese"
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "phase3": [
+    {
+      "question": "Qual país tem mais fusos horários?",
+      "accepted_answers": [
+        "França",
+        "Franca"
+      ]
+    },
+    {
+      "question": "Quem formulou a teoria da relatividade?",
+      "accepted_answers": [
+        "Albert Einstein",
+        "Einstein"
+      ]
+    },
+    {
+      "question": "Qual é o elemento mais abundante do universo?",
+      "accepted_answers": [
+        "Hidrogênio",
+        "Hidrogenio"
+      ]
+    },
+    {
+      "question": "Qual é a capital da Austrália?",
+      "accepted_answers": [
+        "Camberra",
+        "Canberra"
+      ]
+    },
+    {
+      "question": "Quem escreveu A Divina Comédia?",
+      "accepted_answers": [
+        "Dante Alighieri",
+        "Dante"
+      ]
+    },
+    {
+      "question": "Quantos lados tem um dodecágono?",
+      "accepted_answers": [
+        "12",
+        "Doze"
+      ]
+    },
+    {
+      "question": "Qual é o maior órgão do corpo humano?",
+      "accepted_answers": [
+        "Pele"
+      ]
+    },
+    {
+      "question": "Qual país inventou o futebol moderno?",
+      "accepted_answers": [
+        "Inglaterra"
+      ]
+    },
+    {
+      "question": "Qual é o número romano de 50?",
+      "accepted_answers": [
+        "L"
+      ]
+    },
+    {
+      "question": "Quem pintou o teto da Capela Sistina?",
+      "accepted_answers": [
+        "Michelangelo"
+      ]
+    },
+    {
+      "question": "Qual é o menor osso do corpo humano?",
+      "accepted_answers": [
+        "Estribo"
+      ]
+    },
+    {
+      "question": "Qual planeta tem mais luas?",
+      "accepted_answers": [
+        "Saturno"
+      ]
+    },
+    {
+      "question": "Qual é a capital do Canadá?",
+      "accepted_answers": [
+        "Ottawa",
+        "Otava"
+      ]
+    },
+    {
+      "question": "Quem foi Napoleão?",
+      "accepted_answers": [
+        "Líder francês",
+        "Lider frances",
+        "Imperador francês",
+        "Imperador frances",
+        "Frances",
+        "Lider da França",
+        "Imperador da França"
+      ]
+    },
+    {
+      "question": "Qual metal é líquido à temperatura ambiente?",
+      "accepted_answers": [
+        "Mercúrio",
+        "Mercurio"
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "question": "Qual é o número aproximado de π?",
+      "accepted_answers": [
+        "3,14",
+        "3.14"
+      ]
+    },
+    {
+      "question": "Quem descobriu a gravidade?",
+      "accepted_answers": [
+        "Isaac Newton",
+        "Newton"
+      ]
+    },
+    {
+      "question": "Qual é o país mais populoso?",
+      "accepted_answers": [
+        "Índia",
+        "India"
+      ]
+    },
+    {
+      "question": "Qual linguagem é usada na web?",
+      "accepted_answers": [
+        "HTML"
+      ]
+    }
+  ]
+}

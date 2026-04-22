@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}Sal & Fogo{% endblock %}
+
+{% block floating_icons %}
+<div class="orbit-wrap" aria-hidden="true">
+  <span class="orbit o1">🧂</span>
+  <span class="orbit o2">🔥</span>
+  <span class="orbit o3">🧂</span>
+  <span class="orbit o4">🔥</span>
+  <span class="orbit o5">🧂</span>
+  <span class="orbit o6">🔥</span>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="card home-card glass-fire">
+  <div class="hero-embers">🧂 🔥 🧂 🔥</div>
+  <h1 class="title-main">Sal &amp; Fogo</h1>
+  <div class="title-sub">🧂🔥 MEGA QUIZ 🔥🧂</div>
+
+  <p class="status {{ 'status-open' if quiz_open else 'status-closed' }}">
+    {{ 'Quiz aberto para respostas.' if quiz_open else 'Quiz fechado no momento.' }}
+  </p>
+
+  <div class="field-block">
+    <label for="participantName">Insira seu nome!</label>
+    <input id="participantName" type="text" maxlength="45" placeholder="Ex.: Falcão 🔥" />
+    <small>O nome precisa conter um elemento.</small>
+  </div>
+
+  <div class="elements-box">
+    {% for elemento in elementos %}
+      <button type="button" class="element-pill" onclick="appendElement('{{ elemento }}')">{{ elemento }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="meta-note">
+    ⏱️ Tempo total da rodada: <strong>{{ time_minutes }} min</strong>
+  </div>
+
+  <div class="actions home-actions">
+    <button class="btn btn-primary" id="startBtn">Começar Quiz</button>
+  </div>
+
+  <div id="message" class="message-box"></div>
+
+  <div class="home-dev-panel glass-panel-soft">
+    <div class="home-dev-title">PAINEL DEV</div>
+    <div class="home-dev-row">
+      <input id="devPassword" type="password" maxlength="10" placeholder="Senha" class="dev-input home-dev-input" />
+      <button class="btn btn-dev home-dev-button" id="devBtn">Entrar</button>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function appendElement(el) {
+    const input = document.getElementById('participantName');
+    if (!input.value.includes(el)) {
+      input.value = (input.value + ' ' + el).trim();
+    }
+    input.focus();
+  }
+
+  async function buildDeviceFingerprint() {
+    const raw = [
+      navigator.userAgent || '',
+      navigator.language || '',
+      navigator.platform || '',
+      String(navigator.hardwareConcurrency || ''),
+      String(screen.width || ''),
+      String(screen.height || ''),
+      Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+      String(new Date().getTimezoneOffset())
+    ].join('||');
+
+    if (window.crypto && window.crypto.subtle) {
+      const enc = new TextEncoder().encode(raw);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', enc);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    return raw;
+  }
+
+  const msg = document.getElementById('message');
+
+  document.getElementById('startBtn').addEventListener('click', async () => {
+    const name = document.getElementById('participantName').value.trim();
+    const deviceFingerprint = await buildDeviceFingerprint();
+
+    const response = await fetch('/start', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ name, device_fingerprint: deviceFingerprint })
+    });
+
+    const data = await response.json();
+    msg.textContent = data.message || '';
+    msg.className = 'message-box ' + (response.ok ? 'success' : 'error');
+
+    if (data.ok && data.redirect) {
+      window.location.href = data.redirect;
+    }
+  });
+
+  document.getElementById('devBtn').addEventListener('click', async () => {
+    const password = document.getElementById('devPassword').value.trim();
+    const response = await fetch('/dev/login', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ password })
+    });
+    const data = await response.json();
+    msg.textContent = data.message || (data.ok ? 'Entrando no Painel DEV...' : 'Erro ao entrar no Painel DEV.');
+    msg.className = 'message-box ' + (response.ok ? 'success' : 'error');
+    if (data.ok && data.redirect) {
+      window.location.href = data.redirect;
+    }
+  });
+</script>
+{% endblock %}

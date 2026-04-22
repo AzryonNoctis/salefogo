@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Pergunta {{ current_number }}{% endblock %}
+{% block content %}
+<section class="card quiz-card glass-fire">
+  <div class="top-grid">
+    <div class="badge">Participante: {{ participant_name }}</div>
+    <div class="badge">{{ question.phase }}</div>
+    {% if question.category %}<div class="badge">Categoria: {{ question.category }}</div>{% endif %}
+    <div class="badge">Pergunta {{ current_number }}/{{ total_questions }}</div>
+    <div class="badge badge-timer">⏱️ <span id="timer" data-seconds="{{ remaining_seconds }}">{{ remaining_seconds }}</span></div>
+  </div>
+
+  <h2 class="question-title">{{ question.question }}</h2>
+
+  <div class="options-grid">
+    {% for option in question.options %}
+      <label class="option-card">
+        <input type="radio" name="answer" value="{{ loop.index0 }}" />
+        <span>{{ option }}</span>
+      </label>
+    {% endfor %}
+  </div>
+
+  <button id="confirmBtn" class="btn btn-primary disabled-btn" disabled>Confirmar</button>
+  <div id="msg" class="message-box"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const btn = document.getElementById('confirmBtn');
+  const msg = document.getElementById('msg');
+  document.querySelectorAll('input[name="answer"]').forEach(input => {
+    input.addEventListener('change', () => {
+      btn.disabled = false;
+      btn.classList.remove('disabled-btn');
+    });
+  });
+
+  btn.addEventListener('click', async () => {
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (!selected) {
+      msg.textContent = 'Selecione uma alternativa antes de confirmar.';
+      msg.className = 'message-box error';
+      return;
+    }
+
+    const response = await fetch('/answer', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ selected_index: Number(selected.value) })
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      msg.textContent = data.message || 'Erro ao confirmar resposta.';
+      msg.className = 'message-box error';
+      return;
+    }
+    window.location.href = data.redirect;
+  });
+
+  activateTimer('/result');
+</script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Resultado{% endblock %}
+{% block content %}
+<section class="card result-card glass-fire">
+  <div class="hero-embers">🔥 🧂 RESULTADO 🧂 🔥</div>
+  <p class="result-name">Resultado de {{ participant_name }}</p>
+  <h1 class="result-title">Sua pontuação</h1>
+  <div class="score-big">{{ score }}/{{ total_questions }}</div>
+
+  <div class="result-stats">
+    <div class="stat-pill">✅ Acertos: {{ score }}</div>
+    <div class="stat-pill">❌ Erros: {{ wrong_count }}</div>
+    <div class="stat-pill">⏳ Sem resposta: {{ unanswered_count }}</div>
+    <div class="stat-pill">⏱️ Rodada: {{ total_time_seconds // 60 }} min</div>
+  </div>
+
+  <a href="/" class="btn btn-secondary inline-btn">Voltar ao início</a>
+</section>
+{% endblock %}
